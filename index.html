@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hành Trình Hình Thành Quốc Hội Khóa I (1946)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f4; 
+            color: #292524;
+        }
+        h1, h2, h3, h4, .serif-font {
+            font-family: 'Merriweather', serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+        }
+        .timeline-node {
+            transition: all 0.3s ease;
+        }
+        .timeline-node:hover, .timeline-node.active {
+            transform: scale(1.05);
+            background-color: #f5f5f4;
+            border-color: #78350f;
+        }
+        /* HERO BACKGROUND: Thay link ảnh tòa nhà Quốc hội ở dòng url dưới đây */
+        .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(28, 25, 23, 0.8), rgba(28, 25, 23, 0.9)), url('https://namphucons.vn/wp-content/uploads/2021/12/203336435_4227455387324097_6645653143114508172_n.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .context-icon {
+            width: 64px;
+            height: 64px;
+            background-color: #fef3c7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            border: 2px solid #f59e0b;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover .context-icon {
+            background-color: #f59e0b;
+            color: white;
+            transform: translateY(-5px);
+        }
+        .tab-btn.active {
+            border-bottom: 3px solid #78350f;
+            color: #78350f;
+            font-weight: bold;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .animate-fade-in { animation: fadeIn 0.3s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="antialiased selection:bg-stone-300">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-stone-100/95 backdrop-blur shadow-sm border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl">🇻🇳</span>
+                <span class="font-bold text-stone-800 text-lg tracking-wide serif-font uppercase">Quốc Hội 1946</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-xs font-bold text-stone-600 uppercase tracking-widest">
+                <button onclick="scrollToSection('context')" class="hover:text-amber-900 transition-colors">Bối Cảnh</button>
+                <button onclick="scrollToSection('legal')" class="hover:text-amber-900 transition-colors">Pháp Lý</button>
+                <button onclick="scrollToSection('election')" class="hover:text-amber-900 transition-colors">Bầu Cử</button>
+                <button onclick="scrollToSection('significance')" class="hover:text-amber-900 transition-colors">Ý Nghĩa</button>
+            </div>
+            <button class="md:hidden text-2xl">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg text-stone-100 py-36 relative shadow-2xl">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="inline-block px-4 py-1 border border-amber-500/50 rounded-full mb-6 text-amber-400 text-[10px] tracking-[0.4em] uppercase bg-amber-950/40 font-bold backdrop-blur-sm">Hồ sơ lịch sử số</div>
+            <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight text-white drop-shadow-2xl">
+                Bối Cảnh Hình Thành<br>Quốc Hội Khóa I
+            </h1>
+            <p class="text-lg text-stone-300 max-w-2xl mx-auto leading-relaxed mb-10 font-light italic">
+                "Tổng tuyển cử là một dịp cho toàn thể quốc dân tự do lựa chọn những người có tài, có đức để gánh vác công việc nước nhà."
+            </p>
+            <div class="flex justify-center gap-4">
+                <button onclick="scrollToSection('context')" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-12 rounded-full transition-all shadow-xl uppercase text-xs tracking-widest">Khám phá ngay</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 space-y-32 py-24">
+
+        <!-- SECTION 1: CONTEXT (Giữ nguyên Icon như bạn muốn) -->
+        <section id="context" class="scroll-mt-24">
+            <div class="text-center mb-20">
+                <span class="text-amber-700 font-bold text-xs uppercase tracking-[0.3em]">Phần 1</span>
+                <h2 class="text-4xl font-black text-stone-900 serif-font mt-2 mb-4">Nhu Cầu Cấp Thiết Lịch Sử</h2>
+                <div class="w-16 h-1 bg-amber-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 text-center card-hover transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="context-icon">🏛</div>
+                    <h3 class="text-xl font-bold text-stone-800 mb-4 serif-font">Thiết Lập Thể Chế</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed">Xây dựng bộ máy quyền lực hoàn thiện để thay thế Chính phủ lâm thời, củng cố nền móng của Nhà nước dân chủ cộng hòa non trẻ.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 text-center card-hover transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="context-icon">📜</div>
+                    <h3 class="text-xl font-bold text-stone-800 mb-4 serif-font">Nhiệm Vụ Pháp Lý</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed">Tiền đề tiên quyết để Quốc hội soạn thảo và thông qua bản Hiến pháp đầu tiên - văn kiện pháp lý tối cao điều hành quốc gia.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 text-center card-hover transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="context-icon">🛡</div>
+                    <h3 class="text-xl font-bold text-stone-800 mb-4 serif-font">Khẳng Định Chính Danh</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed">Chứng minh tính hợp hiến trước quốc tế, đập tan mọi âm mưu chia rẽ và xuyên tạc của các thế lực phản động trong và ngoài nước.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: LEGAL TIMELINE -->
+        <section id="legal" class="scroll-mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-4 sticky top-24">
+                    <span class="text-amber-700 font-bold text-xs uppercase tracking-[0.3em]">Phần 2</span>
+                    <h2 class="text-4xl font-black text-stone-900 serif-font mt-2 mb-6">Khung Khổ Pháp Lý</h2>
+                    <p class="text-stone-600 mb-8 text-lg leading-relaxed">Chuỗi 05 Sắc lệnh nền tảng ban hành thần tốc, tạo dựng hành lang pháp lý cho cuộc Tổng tuyển cử lịch sử.</p>
+                    <div class="image-frame rounded-2xl overflow-hidden border-4 border-white shadow-xl rotate-2">
+                        <!-- THAY ẢNH MINH HỌA BÊN DƯỚI -->
+                        <img src="https://baotanglichsu.vn/upload/img/news/quoc-hoi-khoa-1_1.jpg" alt="Đại biểu Quốc hội" class="w-full grayscale hover:grayscale-0 transition-all duration-500">
+                    </div>
+                </div>
+
+                <div class="lg:col-span-8 bg-white p-4 md:p-8 rounded-[2rem] shadow-xl border border-stone-200">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/3 flex md:flex-col overflow-x-auto md:overflow-visible gap-3 pb-4 md:pb-0 no-scrollbar" id="timeline-controls">
+                            <!-- Nút bấm sẽ được JS tạo ra ở đây -->
+                        </div>
+                        <div class="md:w-2/3 min-h-[450px]" id="timeline-content">
+                            <!-- Nội dung hiển thị ở đây -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: ELECTION DATA -->
+        <section id="election" class="scroll-mt-24">
+            <div class="bg-stone-900 text-stone-100 rounded-[3.5rem] p-10 md:p-20 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-amber-600/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+                <div class="text-center mb-20 relative z-10">
+                    <span class="text-amber-500 font-bold text-xs uppercase tracking-[0.3em]">Phần 3</span>
+                    <h2 class="text-4xl font-black serif-font mt-2 mb-4">Kết Quả Tổng Tuyển Cử</h2>
+                    <p class="text-stone-400 max-w-xl mx-auto italic">Ngày 06/01/1946 - Dấu mốc chói lọi trong lịch sử dân tộc.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
+                    <div class="chart-container bg-stone-800/60 p-8 rounded-3xl border border-stone-700 shadow-inner">
+                        <canvas id="turnoutChart"></canvas>
+                    </div>
+                    <div class="space-y-10">
+                        <div class="bg-amber-600 p-8 rounded-3xl shadow-lg transform hover:scale-105 transition-transform">
+                            <h4 class="text-amber-100 font-bold uppercase text-xs mb-2 tracking-widest">Kỷ lục tại Hà Nội</h4>
+                            <div class="text-6xl font-black text-white mb-2">98.4%</div>
+                            <p class="text-sm text-amber-100/80">Tỷ lệ phiếu bầu dành cho Chủ tịch Hồ Chí Minh - niềm tin tuyệt đối của nhân dân.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-stone-800 p-6 rounded-2xl border border-stone-700">
+                                <div class="text-amber-500 font-bold text-2xl mb-1">89%</div>
+                                <div class="text-[10px] text-stone-400 uppercase tracking-widest">Cử tri toàn quốc</div>
+                            </div>
+                            <div class="bg-stone-800 p-6 rounded-2xl border border-stone-700">
+                                <div class="text-amber-500 font-bold text-2xl mb-1">333</div>
+                                <div class="text-[10px] text-stone-400 uppercase tracking-widest">Đại biểu trúng cử</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-stone-100 text-stone-500 py-20 border-t border-stone-200">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-16 text-center md:text-left">
+            <div>
+                <h4 class="text-stone-900 font-bold mb-6 serif-font uppercase tracking-widest text-sm text-">Tài Liệu Tham Khảo</h4>
+                <ul class="text-xs space-y-3 font-medium">
+                    <li>Cổng thông tin Quốc hội (quochoi.vn)</li>
+                    <li>Trung tâm Lưu trữ quốc gia III</li>
+                    <li>Sắc lệnh Chính phủ 1945-1946</li>
+                </ul>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4 text-2xl border border-stone-100">🏛</div>
+                <p class="text-[10px] uppercase tracking-[0.4em] font-black text-stone-800">Quốc Hội Khóa I</p>
+            </div>
+            <div class="md:text-right flex flex-col justify-center">
+                <p class="text-xs font-bold text-stone-900 uppercase tracking-widest">&copy; 2026 History Artifact</p>
+                <p class="text-[10px] mt-2 italic text-stone-400 leading-relaxed uppercase">Dành cho mục đích giáo dục</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* ĐỂ THAY ẢNH TRONG DÒNG THỜI GIAN: Thay link ở các thuộc tính 'img' dưới đây */
+        const decreeData = [
+            {
+                id: "14sl",
+                date: "08/09/1945",
+                title: "Sắc lệnh 14-SL",
+                img: "https://thanhnien.mediacdn.vn/Uploaded/anhnt/2016_01_03/saclenh_EMUR.jpg?width=600",
+                content: "Quyết định Tổng tuyển cử trong cả nước. Khẳng định quyền bầu cử và ứng cử của công dân Việt Nam từ 18 tuổi."
+            },
+            {
+                id: "39sl",
+                date: "26/09/1945",
+                title: "Sắc lệnh 39-SL",
+                img: "https://vnanet.vn/Data/Articles/2021/01/05/5277983/vna_p_6946651.jpg",
+                content: "Thành lập Ủy ban dự thảo thể lệ cuộc Tổng tuyển cử với đại diện đa tầng lớp xã hội."
+            },
+            {
+                id: "51sl",
+                date: "17/10/1945",
+                title: "Sắc lệnh 51-SL",
+                img: "https://quochoi.vn/UserFiles/Image/2015/12/11/quochoi-1449807577.jpg",
+                content: "Quy định nguyên tắc: Phổ thông đầu phiếu, Trực tiếp và Bỏ phiếu kín."
+            },
+            {
+                id: "71sl",
+                date: "02/12/1945",
+                title: "Sắc lệnh 71-SL",
+                img: "https://vnanet.vn/Data/Articles/2021/01/05/5277983/vna_p_6946654.jpg",
+                content: "Bổ khuyết thể lệ bầu cử, cho phép ứng viên nộp hồ sơ tại nơi cư trú thuận tiện."
+            },
+            {
+                id: "76sl",
+                date: "18/12/1945",
+                title: "Sắc lệnh 76-SL",
+                img: "https://quochoi.vn/UserFiles/Image/2015/12/11/quochoi-1449807577.jpg",
+                content: "Ấn định ngày Tổng tuyển cử chính thức vào ngày 06/01/1946 trên phạm vi toàn quốc."
+            }
+        ];
+
+        function init() {
+            const controls = document.getElementById('timeline-controls');
+            decreeData.forEach(d => {
+                const btn = document.createElement('button');
+                btn.className = `timeline-node w-full p-4 rounded-2xl border border-stone-100 bg-white flex items-center gap-4 transition-all hover:shadow-md`;
+                btn.id = `btn-${d.id}`;
+                btn.onclick = () => selectDecree(d.id);
+                btn.innerHTML = `
+                    <div class="w-14 h-14 rounded-xl bg-stone-50 overflow-hidden flex-shrink-0 border border-stone-100">
+                        <img src="${d.img}" class="w-full h-full object-cover grayscale opacity-60">
+                    </div>
+                    <div class="text-left">
+                        <div class="text-[9px] font-black text-amber-700 uppercase tracking-wider mb-1">${d.date}</div>
+                        <div class="text-xs font-bold text-stone-800 leading-tight">${d.title}</div>
+                    </div>
+                `;
+                controls.appendChild(btn);
+            });
+            selectDecree('14sl');
+            initCharts();
+        }
+
+        function selectDecree(id) {
+            const d = decreeData.find(item => item.id === id);
+            document.querySelectorAll('.timeline-node').forEach(n => {
+                n.classList.remove('active', 'border-amber-500', 'bg-amber-50/50', 'shadow-md');
+                n.querySelector('img').classList.add('grayscale');
+            });
+            const activeNode = document.getElementById(`btn-${id}`);
+            activeNode.classList.add('active', 'border-amber-500', 'bg-amber-50/50', 'shadow-md');
+            activeNode.querySelector('img').classList.remove('grayscale');
+
+            const content = document.getElementById('timeline-content');
+            content.innerHTML = `
+                <div class="animate-fade-in space-y-8">
+                    <div class="w-full h-72 rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-stone-100">
+                        <img src="${d.img}" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-4 px-2">
+                        <div class="flex items-center gap-3">
+                            <span class="px-4 py-1.5 bg-amber-600 text-white text-[10px] font-black rounded-full uppercase tracking-widest shadow-md">${d.date}</span>
+                            <div class="h-px flex-grow bg-stone-100"></div>
+                        </div>
+                        <h3 class="text-3xl font-black text-stone-900 serif-font">${d.title}</h3>
+                        <p class="text-stone-600 text-lg leading-relaxed font-light">${d.content}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function initCharts() {
+            const ctx = document.getElementById('turnoutChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Toàn Quốc', 'Hà Nội', 'Hải Phòng', 'Quảng Nam'],
+                    datasets: [{
+                        label: 'Tỷ lệ đi bầu (%)',
+                        data: [89, 91.95, 93, 95],
+                        backgroundColor: '#d97706',
+                        hoverBackgroundColor: '#f59e0b',
+                        borderRadius: 12
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { display: false },
+                        tooltip: { backgroundColor: '#1c1917', titleFont: { size: 14 } }
+                    },
+                    scales: { 
+                        y: { beginAtZero: true, max: 100, grid: { color: 'rgba(168, 162, 158, 0.1)' }, ticks: { color: '#a8a29e', font: { size: 10, weight: 'bold' } } },
+                        x: { ticks: { color: '#d6d3d1', font: { size: 11, weight: 'bold' } }, grid: { display: false } }
+                    }
+                }
+            });
+        }
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
