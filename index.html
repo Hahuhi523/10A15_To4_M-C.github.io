@@ -32,7 +32,6 @@
             background-color: #f5f5f4;
             border-color: #78350f;
         }
-        /* HERO BACKGROUND: Thay link ảnh tòa nhà Quốc hội ở dòng url dưới đây */
         .hero-bg {
             background-image: linear-gradient(to bottom, rgba(28, 25, 23, 0.8), rgba(28, 25, 23, 0.9)), url('https://namphucons.vn/wp-content/uploads/2021/12/203336435_4227455387324097_6645653143114508172_n.jpg');
             background-size: cover;
@@ -56,11 +55,6 @@
             color: white;
             transform: translateY(-5px);
         }
-        .tab-btn.active {
-            border-bottom: 3px solid #78350f;
-            color: #78350f;
-            font-weight: bold;
-        }
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         .animate-fade-in { animation: fadeIn 0.3s ease-out; }
@@ -76,11 +70,12 @@
                 <span class="text-2xl">🇻🇳</span>
                 <span class="font-bold text-stone-800 text-lg tracking-wide serif-font uppercase">Quốc Hội 1946</span>
             </div>
-            <div class="hidden md:flex space-x-8 text-xs font-bold text-stone-600 uppercase tracking-widest">
-                <button onclick="scrollToSection('context')" class="hover:text-amber-900 transition-colors">Bối Cảnh</button>
-                <button onclick="scrollToSection('legal')" class="hover:text-amber-900 transition-colors">Pháp Lý</button>
-                <button onclick="scrollToSection('election')" class="hover:text-amber-900 transition-colors">Bầu Cử</button>
-                <button onclick="scrollToSection('significance')" class="hover:text-amber-900 transition-colors">Ý Nghĩa</button>
+            <div class="hidden md:flex space-x-6 text-[10px] font-bold text-stone-600 uppercase tracking-widest">
+                <button onclick="scrollToSection('context')" class="hover:text-amber-900 transition-colors">1. Nhu cầu</button>
+                <button onclick="scrollToSection('legal')" class="hover:text-amber-900 transition-colors">2. Pháp lý</button>
+                <button onclick="scrollToSection('election')" class="hover:text-amber-900 transition-colors">3. Diễn biến</button>
+                <button onclick="scrollToSection('structure')" class="hover:text-amber-900 transition-colors">4. Cơ cấu</button>
+                <button onclick="scrollToSection('meaning')" class="hover:text-amber-900 transition-colors">5. Ý nghĩa</button>
             </div>
             <button class="md:hidden text-2xl">☰</button>
         </div>
@@ -89,7 +84,7 @@
     <!-- Hero Section -->
     <header class="hero-bg text-stone-100 py-36 relative shadow-2xl">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="inline-block px-4 py-1 border border-amber-500/50 rounded-full mb-6 text-amber-400 text-[10px] tracking-[0.4em] uppercase bg-amber-950/40 font-bold backdrop-blur-sm">Hồ sơ lịch sử số</div>
+            <div class="inline-block px-4 py-1 border border-amber-500/50 rounded-full mb-6 text-amber-400 text-[10px] tracking-[0.4em] uppercase bg-amber-950/40 font-bold backdrop-blur-sm">Tư liệu học tập lịch sử</div>
             <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight text-white drop-shadow-2xl">
                 Bối Cảnh Hình Thành<br>Quốc Hội Khóa I
             </h1>
@@ -97,14 +92,14 @@
                 "Tổng tuyển cử là một dịp cho toàn thể quốc dân tự do lựa chọn những người có tài, có đức để gánh vác công việc nước nhà."
             </p>
             <div class="flex justify-center gap-4">
-                <button onclick="scrollToSection('context')" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-12 rounded-full transition-all shadow-xl uppercase text-xs tracking-widest">Khám phá ngay</button>
+                <button onclick="scrollToSection('context')" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-12 rounded-full transition-all shadow-xl uppercase text-xs tracking-widest">Bắt đầu bài học</button>
             </div>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-4 space-y-32 py-24">
 
-        <!-- SECTION 1: CONTEXT (Giữ nguyên Icon như bạn muốn) -->
+        <!-- SECTION 1: CONTEXT -->
         <section id="context" class="scroll-mt-24">
             <div class="text-center mb-20">
                 <span class="text-amber-700 font-bold text-xs uppercase tracking-[0.3em]">Phần 1</span>
@@ -116,17 +111,17 @@
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 text-center card-hover transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                     <div class="context-icon">🏛</div>
                     <h3 class="text-xl font-bold text-stone-800 mb-4 serif-font">Thiết Lập Thể Chế</h3>
-                    <p class="text-stone-500 text-sm leading-relaxed">Xây dựng bộ máy quyền lực hoàn thiện để thay thế Chính phủ lâm thời, củng cố nền móng của Nhà nước dân chủ cộng hòa non trẻ.</p>
+                    <p class="text-stone-500 text-sm leading-relaxed text-justify">Sau 2/9/1945, Nhà nước ta mới ở mô hình "Chính phủ lâm thời". Việc bầu ra Quốc hội là bước đi sống còn để hoàn thiện bộ máy quyền lực bền vững, thay thế cơ chế lâm thời bằng một định chế chính quy.</p>
                 </div>
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 text-center card-hover transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                     <div class="context-icon">📜</div>
                     <h3 class="text-xl font-bold text-stone-800 mb-4 serif-font">Nhiệm Vụ Pháp Lý</h3>
-                    <p class="text-stone-500 text-sm leading-relaxed">Tiền đề tiên quyết để Quốc hội soạn thảo và thông qua bản Hiến pháp đầu tiên - văn kiện pháp lý tối cao điều hành quốc gia.</p>
+                    <p class="text-stone-500 text-sm leading-relaxed text-justify">Chủ tịch Hồ Chí Minh xác định Tổng tuyển cử là một trong 6 nhiệm vụ cấp bách. Đây là tiền đề pháp lý để thành lập Quốc hội - cơ quan duy nhất có quyền soạn thảo và thông qua Hiến pháp 1946.</p>
                 </div>
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 text-center card-hover transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                     <div class="context-icon">🛡</div>
                     <h3 class="text-xl font-bold text-stone-800 mb-4 serif-font">Khẳng Định Chính Danh</h3>
-                    <p class="text-stone-500 text-sm leading-relaxed">Chứng minh tính hợp hiến trước quốc tế, đập tan mọi âm mưu chia rẽ và xuyên tạc của các thế lực phản động trong và ngoài nước.</p>
+                    <p class="text-stone-500 text-sm leading-relaxed text-justify">Giữa vòng vây của thù trong giặc ngoài (quân Tưởng, thực dân Pháp), một Quốc hội do dân bầu sẽ khẳng định tính hợp hiến của chính quyền cách mạng trên trường quốc tế.</p>
                 </div>
             </div>
         </section>
@@ -137,21 +132,16 @@
                 <div class="lg:col-span-4 sticky top-24">
                     <span class="text-amber-700 font-bold text-xs uppercase tracking-[0.3em]">Phần 2</span>
                     <h2 class="text-4xl font-black text-stone-900 serif-font mt-2 mb-6">Khung Khổ Pháp Lý</h2>
-                    <p class="text-stone-600 mb-8 text-lg leading-relaxed">Chuỗi 05 Sắc lệnh nền tảng ban hành thần tốc, tạo dựng hành lang pháp lý cho cuộc Tổng tuyển cử lịch sử.</p>
-                    <div class="image-frame rounded-2xl overflow-hidden border-4 border-white shadow-xl rotate-2">
-                        <!-- THAY ẢNH MINH HỌA BÊN DƯỚI -->
-                        <img src="https://baotanglichsu.vn/upload/img/news/quoc-hoi-khoa-1_1.jpg" alt="Đại biểu Quốc hội" class="w-full grayscale hover:grayscale-0 transition-all duration-500">
+                    <p class="text-stone-600 mb-8 text-lg leading-relaxed">Hệ thống 05 Sắc lệnh nền tảng tạo hành lang cho dân chủ.</p>
+                    <div class="image-frame rounded-2xl overflow-hidden border-4 border-white shadow-xl rotate-2 bg-stone-200">
+                        <img src="https://baotanglichsu.vn/upload/img/news/quoc-hoi-khoa-1_1.jpg" alt="Hồ Chủ tịch và cuộc bầu cử" class="w-full grayscale hover:grayscale-0 transition-all duration-500">
                     </div>
                 </div>
 
                 <div class="lg:col-span-8 bg-white p-4 md:p-8 rounded-[2rem] shadow-xl border border-stone-200">
                     <div class="flex flex-col md:flex-row gap-8">
-                        <div class="md:w-1/3 flex md:flex-col overflow-x-auto md:overflow-visible gap-3 pb-4 md:pb-0 no-scrollbar" id="timeline-controls">
-                            <!-- Nút bấm sẽ được JS tạo ra ở đây -->
-                        </div>
-                        <div class="md:w-2/3 min-h-[450px]" id="timeline-content">
-                            <!-- Nội dung hiển thị ở đây -->
-                        </div>
+                        <div class="md:w-1/3 flex md:flex-col overflow-x-auto md:overflow-visible gap-3 pb-4 md:pb-0 no-scrollbar" id="timeline-controls"></div>
+                        <div class="md:w-2/3 min-h-[450px]" id="timeline-content"></div>
                     </div>
                 </div>
             </div>
@@ -160,33 +150,98 @@
         <!-- SECTION 3: ELECTION DATA -->
         <section id="election" class="scroll-mt-24">
             <div class="bg-stone-900 text-stone-100 rounded-[3.5rem] p-10 md:p-20 shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-amber-600/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
                 <div class="text-center mb-20 relative z-10">
                     <span class="text-amber-500 font-bold text-xs uppercase tracking-[0.3em]">Phần 3</span>
-                    <h2 class="text-4xl font-black serif-font mt-2 mb-4">Kết Quả Tổng Tuyển Cử</h2>
-                    <p class="text-stone-400 max-w-xl mx-auto italic">Ngày 06/01/1946 - Dấu mốc chói lọi trong lịch sử dân tộc.</p>
+                    <h2 class="text-4xl font-black serif-font mt-2 mb-4">Diễn Biến & Khí Thế (06/01/1946)</h2>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
-                    <div class="chart-container bg-stone-800/60 p-8 rounded-3xl border border-stone-700 shadow-inner">
+                    <div class="chart-container bg-stone-800/60 p-8 rounded-3xl border border-stone-700">
                         <canvas id="turnoutChart"></canvas>
                     </div>
-                    <div class="space-y-10">
-                        <div class="bg-amber-600 p-8 rounded-3xl shadow-lg transform hover:scale-105 transition-transform">
-                            <h4 class="text-amber-100 font-bold uppercase text-xs mb-2 tracking-widest">Kỷ lục tại Hà Nội</h4>
-                            <div class="text-6xl font-black text-white mb-2">98.4%</div>
-                            <p class="text-sm text-amber-100/80">Tỷ lệ phiếu bầu dành cho Chủ tịch Hồ Chí Minh - niềm tin tuyệt đối của nhân dân.</p>
+                    <div class="space-y-6">
+                        <div class="bg-stone-800/80 p-6 rounded-2xl border border-stone-700">
+                            <h4 class="text-amber-500 font-bold text-sm mb-2">Sự đồng thuận toàn dân</h4>
+                            <p class="text-stone-400 text-sm">Xấp xỉ 90% cử tri toàn quốc tham gia đi bầu. Tại Nam Bộ, dù thực dân Pháp nổ súng đánh phá, nhân dân vẫn kiên cường đi bỏ phiếu bảo vệ độc lập.</p>
                         </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-stone-800 p-6 rounded-2xl border border-stone-700">
-                                <div class="text-amber-500 font-bold text-2xl mb-1">89%</div>
-                                <div class="text-[10px] text-stone-400 uppercase tracking-widest">Cử tri toàn quốc</div>
-                            </div>
-                            <div class="bg-stone-800 p-6 rounded-2xl border border-stone-700">
-                                <div class="text-amber-500 font-bold text-2xl mb-1">333</div>
-                                <div class="text-[10px] text-stone-400 uppercase tracking-widest">Đại biểu trúng cử</div>
-                            </div>
+                        <div class="bg-amber-600 p-8 rounded-3xl shadow-lg transform hover:scale-105 transition-transform">
+                            <h4 class="text-amber-100 font-bold uppercase text-[10px] mb-2 tracking-widest">Kỷ lục tại Hà Nội</h4>
+                            <div class="text-6xl font-black text-white mb-2">98.4%</div>
+                            <p class="text-xs text-amber-100/90 font-medium">Tỷ lệ phiếu bầu dành cho ứng cử viên Hồ Chí Minh.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: STRUCTURE -->
+        <section id="structure" class="scroll-mt-24">
+            <div class="text-center mb-20">
+                <span class="text-amber-700 font-bold text-xs uppercase tracking-[0.3em]">Phần 4</span>
+                <h2 class="text-4xl font-black text-stone-900 serif-font mt-2 mb-4">Cơ Cấu Đại Biểu & Đại Đoàn Kết</h2>
+                <div class="w-16 h-1 bg-amber-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="flex gap-6 p-6 bg-white rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-4xl">👨‍🏫</div>
+                        <div>
+                            <h4 class="font-bold text-stone-800 text-lg mb-1">Đa dạng thành phần</h4>
+                            <p class="text-stone-500 text-sm">Gồm 333 đại biểu ưu tú, bao gồm công nhân, nông dân, trí thức, nhà buôn, nhân sĩ cách mạng và đại diện các tôn giáo (Phật giáo, Thiên chúa giáo, Cao Đài...)</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 p-6 bg-white rounded-2xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-4xl">🤝</div>
+                        <div>
+                            <h4 class="font-bold text-stone-800 text-lg mb-1">Tinh thần hòa hợp</h4>
+                            <p class="text-stone-500 text-sm">Có sự tham gia của 70 đại biểu không qua bầu cử từ Việt Quốc và Việt Cách nhằm thể hiện tinh thần đoàn kết dân tộc tối cao trước họa xâm lăng.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                    <div class="bg-stone-900 p-8 rounded-3xl text-center">
+                        <div class="text-amber-500 text-4xl font-black mb-2">333</div>
+                        <div class="text-[10px] text-stone-400 font-bold uppercase tracking-widest">Đại biểu chính thức</div>
+                    </div>
+                    <div class="bg-amber-100 p-8 rounded-3xl text-center border-2 border-amber-200">
+                        <div class="text-amber-800 text-4xl font-black mb-2">10+</div>
+                        <div class="text-[10px] text-amber-900/60 font-bold uppercase tracking-widest">Thành phần giai tầng</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: MEANING -->
+        <section id="meaning" class="scroll-mt-24">
+            <div class="bg-amber-50 rounded-[4rem] p-12 md:p-24 border border-amber-200/50">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-16">
+                        <span class="text-amber-700 font-bold text-xs uppercase tracking-[0.3em]">Phần 5</span>
+                        <h2 class="text-4xl font-black text-stone-900 serif-font mt-2 mb-4 text-center">Giá Trị Lịch Sử Trường Tồn</h2>
+                    </div>
+                    <ul class="space-y-10">
+                        <li class="flex gap-8 items-start">
+                            <span class="flex-shrink-0 w-12 h-12 bg-amber-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">01</span>
+                            <div>
+                                <h4 class="text-xl font-bold text-stone-800 mb-2">Nền tảng Pháp quyền</h4>
+                                <p class="text-stone-600 leading-relaxed">Thiết lập quyền lập hiến, đưa đến sự ra đời của Hiến pháp 1946 - văn kiện tối cao điều hành quốc gia theo hướng dân chủ, tiến bộ.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-8 items-start">
+                            <span class="flex-shrink-0 w-12 h-12 bg-amber-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">02</span>
+                            <div>
+                                <h4 class="text-xl font-bold text-stone-800 mb-2">Sức mạnh Chính trị</h4>
+                                <p class="text-stone-600 leading-relaxed">Đập tan âm mưu phản động, củng cố tuyệt đối niềm tin của nhân dân vào Chính phủ Hồ Chí Minh và con đường độc lập.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-8 items-start">
+                            <span class="flex-shrink-0 w-12 h-12 bg-amber-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">03</span>
+                            <div>
+                                <h4 class="text-xl font-bold text-stone-800 mb-2">Vị thế Đối ngoại</h4>
+                                <p class="text-stone-600 leading-relaxed">Tạo thế đứng hợp pháp trên trường quốc tế, giúp Nhà nước ta có tư thế đàm phán vững vàng trong các sự kiện ngoại giao sau này.</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -194,63 +249,53 @@
     </main>
 
     <footer class="bg-stone-100 text-stone-500 py-20 border-t border-stone-200">
-        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-16 text-center md:text-left">
-            <div>
-                <h4 class="text-stone-900 font-bold mb-6 serif-font uppercase tracking-widest text-sm text-">Tài Liệu Tham Khảo</h4>
-                <ul class="text-xs space-y-3 font-medium">
-                    <li>Cổng thông tin Quốc hội (quochoi.vn)</li>
-                    <li>Trung tâm Lưu trữ quốc gia III</li>
-                    <li>Sắc lệnh Chính phủ 1945-1946</li>
-                </ul>
-            </div>
-            <div class="flex flex-col items-center justify-center">
-                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4 text-2xl border border-stone-100">🏛</div>
-                <p class="text-[10px] uppercase tracking-[0.4em] font-black text-stone-800">Quốc Hội Khóa I</p>
-            </div>
-            <div class="md:text-right flex flex-col justify-center">
-                <p class="text-xs font-bold text-stone-900 uppercase tracking-widest">&copy; 2026 History Artifact</p>
-                <p class="text-[10px] mt-2 italic text-stone-400 leading-relaxed uppercase">Dành cho mục đích giáo dục</p>
-            </div>
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="inline-block px-4 py-2 bg-stone-200/50 rounded-full mb-6 text-[10px] font-bold text-stone-600 uppercase tracking-widest">Nguồn: Cổng thông tin điện tử Quốc hội (quochoi.vn)</div>
+            <p class="text-xs font-bold text-stone-900 uppercase tracking-widest">&copy; 2026 History Learning Artifact</p>
         </div>
     </footer>
 
     <script>
-        /* ĐỂ THAY ẢNH TRONG DÒNG THỜI GIAN: Thay link ở các thuộc tính 'img' dưới đây */
         const decreeData = [
             {
                 id: "14sl",
                 date: "08/09/1945",
                 title: "Sắc lệnh 14-SL",
+                thumbnail: "https://thanhnien.mediacdn.vn/Uploaded/anhnt/2016_01_03/saclenh_EMUR.jpg?width=100",
                 img: "https://thanhnien.mediacdn.vn/Uploaded/anhnt/2016_01_03/saclenh_EMUR.jpg?width=600",
-                content: "Quyết định Tổng tuyển cử trong cả nước. Khẳng định quyền bầu cử và ứng cử của công dân Việt Nam từ 18 tuổi."
+                content: "Ban hành chỉ 6 ngày sau Tuyên ngôn Độc lập. Sắc lệnh đặt nền móng cho quyền làm chủ, quy định quyền bầu cử và ứng cử của mọi công dân từ đủ 18 tuổi, không phân biệt nam nữ."
             },
             {
                 id: "39sl",
                 date: "26/09/1945",
                 title: "Sắc lệnh 39-SL",
-                img: "https://vnanet.vn/Data/Articles/2021/01/05/5277983/vna_p_6946651.jpg",
-                content: "Thành lập Ủy ban dự thảo thể lệ cuộc Tổng tuyển cử với đại diện đa tầng lớp xã hội."
+                thumbnail: "",
+                img: "https://quochoi.vn/content/tintuc/NewsMedia2020/Minh%20Thanh/6.1saclenh2.jpg",
+                content: "Thành lập Ủy ban dự thảo thể lệ cuộc Tổng tuyển cử. Thành phần Ủy ban gồm đại diện trí thức, thanh niên, công nhân, nông dân và phụ nữ, đảm bảo tính đại diện rộng rãi."
             },
             {
                 id: "51sl",
                 date: "17/10/1945",
                 title: "Sắc lệnh 51-SL",
+                thumbnail: "https://via.placeholder.com/100x100?text=51-SL", 
                 img: "https://quochoi.vn/UserFiles/Image/2015/12/11/quochoi-1449807577.jpg",
-                content: "Quy định nguyên tắc: Phổ thông đầu phiếu, Trực tiếp và Bỏ phiếu kín."
+                content: "Văn bản trọng tâm dài 70 điều. Quy định chi tiết các nguyên tắc: Phổ thông đầu phiếu, Trực tiếp và Bỏ phiếu kín. Đây là quy chuẩn dân chủ hiện đại nhất thời bấy giờ."
             },
             {
                 id: "71sl",
                 date: "02/12/1945",
                 title: "Sắc lệnh 71-SL",
+                thumbnail: "https://via.placeholder.com/100x100?text=71-SL",
                 img: "https://vnanet.vn/Data/Articles/2021/01/05/5277983/vna_p_6946654.jpg",
-                content: "Bổ khuyết thể lệ bầu cử, cho phép ứng viên nộp hồ sơ tại nơi cư trú thuận tiện."
+                content: "Sắc lệnh bổ khuyết nhằm tháo gỡ các khó khăn thực tế về giao thông và thủ tục. Cho phép các ứng cử viên được nộp đơn tại nơi cư trú thay vì nơi sinh quán."
             },
             {
                 id: "76sl",
                 date: "18/12/1945",
                 title: "Sắc lệnh 76-SL",
-                img: "https://quochoi.vn/UserFiles/Image/2015/12/11/quochoi-1449807577.jpg",
-                content: "Ấn định ngày Tổng tuyển cử chính thức vào ngày 06/01/1946 trên phạm vi toàn quốc."
+                thumbnail: "https://via.placeholder.com/100x100?text=76-SL",
+                img: "https://vnanet.vn/Data/Articles/2021/01/05/5277983/vna_p_6946655.jpg",
+                content: "Ấn định ngày Tổng tuyển cử chính thức vào Chủ nhật, 06/01/1946. Đây là thời hạn cuối cùng sau khi đã lùi ngày để chuẩn bị chu đáo và thể hiện thiện chí hòa hợp dân tộc."
             }
         ];
 
@@ -263,7 +308,7 @@
                 btn.onclick = () => selectDecree(d.id);
                 btn.innerHTML = `
                     <div class="w-14 h-14 rounded-xl bg-stone-50 overflow-hidden flex-shrink-0 border border-stone-100">
-                        <img src="${d.img}" class="w-full h-full object-cover grayscale opacity-60">
+                        <img src="${d.thumbnail}" class="w-full h-full object-cover grayscale opacity-60">
                     </div>
                     <div class="text-left">
                         <div class="text-[9px] font-black text-amber-700 uppercase tracking-wider mb-1">${d.date}</div>
@@ -288,7 +333,7 @@
 
             const content = document.getElementById('timeline-content');
             content.innerHTML = `
-                <div class="animate-fade-in space-y-8">
+                <div class="animate-fade-in space-y-6">
                     <div class="w-full h-72 rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-stone-100">
                         <img src="${d.img}" class="w-full h-full object-cover">
                     </div>
@@ -297,8 +342,8 @@
                             <span class="px-4 py-1.5 bg-amber-600 text-white text-[10px] font-black rounded-full uppercase tracking-widest shadow-md">${d.date}</span>
                             <div class="h-px flex-grow bg-stone-100"></div>
                         </div>
-                        <h3 class="text-3xl font-black text-stone-900 serif-font">${d.title}</h3>
-                        <p class="text-stone-600 text-lg leading-relaxed font-light">${d.content}</p>
+                        <h3 class="text-2xl font-black text-stone-900 serif-font">${d.title}</h3>
+                        <p class="text-stone-600 text-base leading-relaxed text-justify">${d.content}</p>
                     </div>
                 </div>
             `;
@@ -314,7 +359,6 @@
                         label: 'Tỷ lệ đi bầu (%)',
                         data: [89, 91.95, 93, 95],
                         backgroundColor: '#d97706',
-                        hoverBackgroundColor: '#f59e0b',
                         borderRadius: 12
                     }]
                 },
@@ -323,11 +367,11 @@
                     maintainAspectRatio: false,
                     plugins: { 
                         legend: { display: false },
-                        tooltip: { backgroundColor: '#1c1917', titleFont: { size: 14 } }
+                        tooltip: { backgroundColor: '#1c1917' }
                     },
                     scales: { 
-                        y: { beginAtZero: true, max: 100, grid: { color: 'rgba(168, 162, 158, 0.1)' }, ticks: { color: '#a8a29e', font: { size: 10, weight: 'bold' } } },
-                        x: { ticks: { color: '#d6d3d1', font: { size: 11, weight: 'bold' } }, grid: { display: false } }
+                        y: { beginAtZero: true, max: 100, ticks: { color: '#a8a29e', font: { size: 10 } }, grid: { color: '#292524' } },
+                        x: { ticks: { color: '#d6d3d1', font: { size: 10 } }, grid: { display: false } }
                     }
                 }
             });
